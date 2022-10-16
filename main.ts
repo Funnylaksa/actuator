@@ -12,12 +12,14 @@ radio.onReceivedString(function (receivedString) {
         pins.digitalWritePin(DigitalPin.P2, 0)
         basic.showIcon(IconNames.No)
         basic.pause(100)
+        colorbit_51bit.showColor(colorbit.colors(BitColors.Green))
     } else if (receivedString == "ON") {
         // fan on
         pins.digitalWritePin(DigitalPin.P1, 1)
         pins.digitalWritePin(DigitalPin.P2, 0)
         basic.showIcon(IconNames.Heart)
         basic.pause(100)
+        colorbit_51bit.showColor(colorbit.colors(BitColors.Blue))
     } else {
     	
     }
@@ -37,8 +39,4 @@ basic.forever(function () {
     serial.writeLine("rainbow light")
     colorbit_51bit = colorbit.initColorBit(DigitalPin.P8, BitColorMode.RGB)
     basic.showIcon(IconNames.SmallDiamond)
-    colorbit_51bit.showColor(colorbit.colors(BitColors.Green))
-    basic.pause(500)
-    colorbit_51bit.showColor(colorbit.colors(BitColors.Blue))
-    basic.pause(500)
 })
