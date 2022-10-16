@@ -1,5 +1,5 @@
 {
-    "name": "actuator",
+    "name": "actuator code",
     "description": "",
     "dependencies": {
         "core": "*",
